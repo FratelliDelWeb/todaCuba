@@ -1,0 +1,87 @@
+{% extends "TodaCubaApp/base.html" %}
+{% block content %}
+{% load static %}
+
+<div class="row col-12" style="margin-top:1vw">
+    <div class="col-4"></div>
+    <div class="col-4" style="margin-top:1vw;font-size:20px;text-align: center;font-weight: bold;">
+        <p>Lo sapevate?</p>
+    </div>
+    <div class="col-4 "></div>
+</div>
+
+{% for sabiasQ in sabiasQ_list %}
+    <div class="row col-12" style="margin-top:1vw">
+        <div class="col-12 col-md-2"></div>
+        <div class="col-12 col-md-4 flex-column" style="margin-bottom: 2vw;">
+            <p class="wow fadeInLeftBig" style="margin-top:1vw;font-size: 20px;text-align: justify;">{{ sabiasQ.nombreDelArticulo }}</p>
+            <p class="wow fadeInLeftBig" style="margin-top:1vw;font-size: 20px;text-align: justify;">{{ sabiasQ.descripcionDelArticulo }}</p>
+            <a style="background-color: #0e8253; padding: 0.7vw; color: white;border-radius: 10px;" href="{{ sabiasQ.leerMas }}">ulteriore...</a>
+        </div>
+        <div class="col-12 col-md-4 flex-column">
+            <img class="wow fadeInRightBig mx-auto" src="{{ sabiasQ.imagen1.url }}" alt="Imagen Quienes Somos" style="width:70%;margin:auto;display: flex;">
+        </div>
+    </div>
+{% endfor %}
+{% endblock %}
+<!--
+
+<div class="row col-12" style="margin-top: 4vw;">
+    <div class="col-2"></div>
+    <div class="col-8" style="margin: auto;text-align: center;">
+        <h2 class="wow flipInY">Sabias Que</h2>
+    </div>
+    <div class="col-2"></div>
+</div>
+
+
+<div class="row col-12" style="margin-top: 4vw;">
+    <div class="col-2"></div>
+    <div class="col-8">
+
+        <div class="container">
+            <div class="evento">
+                <div class="foto wow bounceInLeft">
+                    <img src="{% static 'IMG/SQ-ciudadaniaItaliana.jpg' %}" alt="">
+                </div>
+                <p class="fecha wow bounce">
+
+                    Para solicitar là CITTADINANZA ITALIANA se necesita: * Antecedentes Penales legalizados en el MINREX, traducidos y legalizados en el Consulado Italiano en Cuba* * Certificado de Nacimiento, legalizado en el MINREX, traducido y legalizado en el Consulado
+                    Italiano en Cuba* * Certificado B1 que ateste el conocimiento de la lengua Italiana* * SPID de la posta* * En el caso se solicite la CITTADINANZA x residencia es importante tener los 3 ultimos años de rédito consecutivos* Toda Cuba
+                    te asesora y te guía en todo la trayectoria .</p>
+
+
+
+            </div>
+            <div class="evento">
+                <div class="foto wow bounceInRight">
+                    <img src="{% static 'IMG/SQ.jpg' %}" alt="">
+                </div>
+                <p class="fecha wow bounce">Para renovar tu pasaporte lo puedes hacer a través de nuestra oficina, incluso sin presentarte físicamente ni enviar documentos x la posta??? Envíanos a través de WHATSSAP los siguientes documentos escaneados: * Certificado de nacimiento
+                    (no debe ser ni legalizado, ni traducido)* * Fotocopia de las páginas escritas del viejo pasaporte* * En caso de pérdida, copia de la denuncia a las autoridades pertinentes* * Formulario que te enviaremos en el momento de tu solicitud*
+                    * Fotografía hecha por una segunda persona con tu propio celular, del cuello para arriba, con fondo blanco y ningún escote (no selfie, sin sombras, sin filtros)* Toda Cuba te asesora y te guía en toda la trayectoria </p>
+            </div>
+            <div class="evento">
+                <div class="foto wow bounceInLeft">
+                    <img src="{% static 'IMG/SQ1.jpg' %}" alt="">
+                </div>
+                <h3 class="fecha wow bounce">Toda Cuba se encarga de traer a tus familiares por cualquier tipología de visa??? * TURISMO INDEPENDIENTE* * VISA FAMILIAR POR RICONGIUNGIMENTO (familiares de primer grado de un ciudadano italiano,</h3>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <div class="col-2"></div>
+</div>
+-->

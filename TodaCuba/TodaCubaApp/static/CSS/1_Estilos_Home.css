@@ -1,0 +1,410 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+li:hover {
+    list-style: none;
+}
+
+a {
+    list-style: none;
+    text-decoration: none;
+}
+
+a:hover {
+    list-style: none;
+    text-decoration: none;
+}
+
+
+/*Modal Informece antes de Viajar*/
+
+.contenedor-all {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    padding: 40px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 600ms;
+}
+
+.contenedor-all:target {
+    background: rgba(0, 0, 0, 0.8);
+    visibility: visible;
+    opacity: 1;
+}
+
+.contenedor-all:target .popup {
+    top: 50%;
+    left: 50%;
+    transform: rotate(0deg) translate(-50%, -50%);
+    visibility: visible;
+}
+
+.popup {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    background: white;
+    visibility: hidden;
+    top: -80%;
+    left: -80%;
+    transform: rotate(90deg) translate(-150%, 230%);
+    transition: all 600ms;
+}
+
+.img {
+    width: 40%;
+    background-image: url(../image/img4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.contenedor-text {
+    width: 60%;
+    padding: 50px;
+    overflow-y: auto;
+}
+
+.contenedor-text h1 {
+    font-size: 20px;
+}
+
+.contenedor-text p {
+    margin-top: 1vw;
+    font-size: 16px;
+}
+
+.btn-close-popup {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    padding: 20px;
+    background: black;
+    color: white;
+    border-radius: 50%;
+    line-height: 10px;
+}
+
+
+/*carrusel*/
+
+.slider-frame {
+    width: 100%;
+    overflow: hidden;
+    filter: brightness(0.5);
+    height: 22vw;
+    min-height: 200px;
+    z-index: 0 !important;
+}
+
+.slider-frame ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-frame li {
+    width: 100%;
+    list-style: none;
+}
+
+.slider-frame img {
+    width: 100%;
+}
+
+@keyframes slide {
+    0% {
+        margin-left: 0;
+    }
+    20% {
+        margin-left: 0;
+    }
+    25% {
+        margin-left: -100%;
+    }
+    45% {
+        margin-left: -100%;
+    }
+    50% {
+        margin-left: -200%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+    75% {
+        margin-left: -300%;
+    }
+    100% {
+        margin-left: -300%;
+    }
+}
+
+
+/*menu interior*/
+@media(max-width:1147px) {
+ .pmenu{
+    display: none;
+    transition: all 3s ease;
+ }
+ .menu_centro{
+    margin-top: 5vw;
+ }
+ 
+.botones_menu {
+    transition: all 3s ease;
+    padding: 3vw 3vw 0vw 3vw !important;
+}
+}
+.botones_menu {
+    position: absolute;
+    width: 50vw;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    padding: 3vw 15vw 0vw 15vw;
+}
+
+.botones_menu p {
+    font-size: 20px;
+    padding-bottom: 1vw;
+    color: white;
+}
+
+.menu_centro {
+    width: 100%;
+    background: white;
+    border-radius: 5vw;
+    display: flex;
+    justify-content: center;
+}
+
+.menu_centro li:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    color: black !important;
+}
+
+.menu_centro li {
+    list-style: none;
+    width: 100%;
+    font-size:16px;
+    padding: 1vw 1vw 1vw 1vw;
+    border-right: 1px solid #0e8253;
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+    color: black !important;
+}
+
+.menu_centro a {
+    color: black !important;
+}
+
+
+/*lo_que_ofrecemos */
+
+.lo_que_ofrecemos img {
+    width: 10vw;
+}
+
+.lo_que_ofrecemos p {
+    font-size: 20px;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+.img_ofrecemos img {
+    width: 10vw;
+    padding: 1vw 1vw 1vw 2vw;
+}
+
+
+/*servicios vista 3d*/
+
+.contenedor__cont {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 1.2VW;
+    margin-bottom: 1vw;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cont__father {
+    margin: 20px;
+    perspective: 1000px;
+}
+
+.cont__father:hover .cont {
+    transform: rotateY(180deg);
+}
+
+.cont {
+    width: 12vw;
+    min-width: 200px;
+    height: 13vw;
+    min-height: 180px;;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 600ms;
+}
+
+.cont__front {
+    background-size: cover;
+    background-position: center;
+}
+
+.cont__front,
+.cont__back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    border-radius: 20px;
+}
+
+.cont__back {
+    transform: rotateY(180deg);
+    background: #dfecea;
+}
+
+.body__cont_front {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transform: translateZ(60px);
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+}
+
+.body__cont_back {
+    transform: translateZ(60px);
+}
+
+.excursion {
+    font-size: 13.5px;
+    border-bottom: 1px solid #0e8253;
+    padding: 0.5vw;
+    flex-direction: column;
+    display: block;
+}
+
+.excursion:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
+    color: #fff !important;
+    background: #0e8253;
+    border-radius: 5px;
+}
+
+.excursion:active {
+    transform: scale(1);
+    transition: all 0.5s;
+    color: #fff !important;
+    background: #024788;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    cursor: pointer;
+}
+
+tr:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
+    color: #024788;
+}
+
+.cont__back td {
+    font-size: medium;
+    width: 150px;
+    padding: 1vw;
+    border-bottom: 1px solid white;
+    font-size: 15px;
+}
+
+tr:active {
+    transform: scale(1);
+    transition: all 0.5s ease;
+    color: #0e8253;
+}
+
+
+/*Informacion rapida*/
+
+.informacion_rapida1 p {
+    margin-top: 0.5vw;
+}
+
+.informacion_rapida1 {
+    width: 15vw;
+    margin: 1vw;
+    text-align: center;
+    border-radius: 20px;
+    padding: 0.5vw;
+}
+
+
+/*Boton de ir hacia arriba*/
+
+
+#boton_subir {
+    width: 50px;
+    height: 50px;
+    background: #024788;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 30px;
+    position: fixed;
+    bottom: 260px;
+    right: 20px;
+    cursor: pointer;
+    transition: all 300ms ease;
+    transform: scale(0);
+}
+
+#boton_subir:hover {
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+    background: #0e8253;
+}
+

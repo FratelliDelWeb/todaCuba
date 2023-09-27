@@ -1,0 +1,164 @@
+{% extends "TodaCubaApp/base.html" %} {% block content %} {% load static %}
+
+<div class="row col-12" style="margin-top: 2vw;">
+    <div class="col-2"></div>
+    <div class="col-8" style="border-bottom: 1px solid #024788">
+        <h3>Personaliza tu Tour</h3>
+    </div>
+    <div class="col-2"></div>
+</div>
+
+<div class="row col-12" style="text-align: center; margin-top: 2vw ;">
+    <div class="col-2"></div>
+    <div class="col-8" style="border-bottom: 1px solid #024788; padding-bottom:1vw">
+        <form class="form-horizontal" role="form">
+            <div class="form-group" style="display: flex">
+                <h4 for="inputEmail1" class="col-lg-2 control-label">Datos</h4>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" id="inputEmail1" placeholder="Nombre">
+                </div>
+            </div>
+            <div class="form-group" style="display: flex">
+                <h4 for="inputPassword1" class="col-lg-2 control-label">Personales</h4>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" id="inputPassword1" placeholder="Apellidos">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-2"></div>
+</div>
+<div class="row col-12" style="margin-top: 1vw; text-align: center;">
+    <div class="col-2"></div>
+    <div class="col-2">Tipo de Alojamiento*</div>
+    <div class="col-2">Número de personas*</div>
+    <div class="col-2">Transporte*</div>
+    <div class="col-2">Recogida en el aeropuesto*</div>
+    <div class="col-2"></div>
+</div>
+
+<div class="row col-12" style="margin-top: 1vw;">
+    <div class="col-2"></div>
+    <div class="col-2" style="padding:0 1vw 0 1vw">
+        <select class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+    </div>
+
+
+    <div class="col-2" style="padding:0 1vw 0 1vw">
+        <select class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+    </div>
+    <div class="col-2" style="padding:0 1vw 0 1vw">
+        <select class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+    </div>
+    <div class="col-2" style="padding:0 1vw 0 1vw">
+        <select class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+    </div>
+</div>
+
+<div class="row col-12" style="margin-top: 1vw; text-align: center; ">
+    <div class="col-2"></div>
+    <div class="col-2">Fecha de llegada*</div>
+    <div class="col-2">Fecha de partida*</div>
+    <div class="col-2"></div>
+    <div class="col-2"></div>
+    <div class="col-2"></div>
+</div>
+
+<div class="row col-12" style="margin-top: 1vw;">
+    <div class="col-2"></div>
+    <div class="col-2" style="padding:0 1vw 0 1vw">
+        <select class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+    </div>
+    <div class="col-2 " style="padding:0 1vw 0 1vw ">
+        <select class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+    </div>
+
+</div>
+<div class="row col-12" style="margin-top: 2vw; ">
+    <div class="col-2"></div>
+    <div class="col-8" style="border-top: 1px solid #024788;margin-top: 1vw;">
+        <h5 style="margin: 1vw;">Seleccione todas las actividades que desea realizar</h5>
+        <div style="display: flex">
+            <div class="mb-3 form-check" style="padding: 1vw;">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Danza</label>
+            </div>
+            <div class="mb-3 form-check" style="padding: 1vw;">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Pezca</label>
+            </div>
+            <div class="mb-3 form-check" style="padding: 1vw;">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Canotaje</label>
+            </div>
+            <div class="mb-3 form-check" style="padding: 1vw;">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Bucear</label>
+            </div>
+            <div class="mb-3 form-check" style="padding: 1vw;">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Equitación</label>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-2"></div>
+</div>
+<div class="row col-12">
+    <div class="col-2"></div>
+    <div class="col-8">
+        <div class="form-group">
+            <label for="exampleInputPassword1">Escribe tu mensaje</label>
+            <textarea class="form-control" rows="3"></textarea>
+        </div>
+    </div>
+    <div class="col-2"></div>
+</div>
+<div class="row col-12" style="margin: 1vw; margin-left:3vw; ">
+
+    <div class="col-3"></div>
+    <div class="col-3"></div>
+    <div class="col-3">
+        <a src="" href="" style="background:#024788; padding:0.8vw; margin-left: 20vw; text-decoration: none !important; list-style: none !important; border-radius: 10px;color: white;">Enviar</a>
+    </div>
+    <div class="col-3"></div>
+</div>
+
+
+{%endblock%}

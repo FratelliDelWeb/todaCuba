@@ -1,0 +1,214 @@
+{% extends "TodaCubaApp/base.html" %} {% block content %} {% load static %}
+
+<!--Carrusel-->
+<div>
+    <div class="botones_menu ">
+        <div style="text-align: center; ">
+            <p class="pmenu">TODA CUBA, un tour operator cubano gestito da due cubane, che anche se abbiamo visto in italia per più di 10 anni, non abbiamo ancora perso la nostra cubanità, non abbiamo nemmeno perso le nostre radici, e questo è quello che vogliamo
+                trasmettere la nostra passione, la nostra musica e il nostro modo di vivere così diverso e divertente.</p>  <div class="menu_centro ">
+                <li style="width: 70%; "> <a href="#modal" class="btn-open-popup" style="color:black !important; text-decoration: none;">Informati prima del viaggio</a> <span class="icon-down-dir-2 " style="margin-top: 1vw "></span></li>
+                <li style="width: 50% ; "><a href="{% url 'personalizatutour' %}"> Personalizza il tuo Tour<span class="icon-down-dir-2 " style="margin-top: 1vw "></span></a></li>
+                <li style="width: 35% ; border: none; "><a href="{% url 'SabiasQ' %}">Lo sapevate?
+                    <span class="icon-down-dir-2 " style="margin-top: 1vw "></span></a></li>
+              
+<div style="background: #0e8253 ; width: 75%;height: auto; padding-top: 0.5vw; padding-bottom: 1vw; border-top-right-radius: 5vw; border-bottom-right-radius: 5vw; "> 
+              <li style="border: none;color: white !important">Offerte del mese</li>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="contenedor-all" id="modal" style="z-index: 30;">
+
+        <div class="popup">
+            <div class="img_fotopasaporte">
+                <img style="width: 20vw; margin-bottom: 1vw;" src="{% static 'IMG/fotopasaporte.jpg'%} " alt="">
+                <img style="width: 20vw;" src="{% static 'IMG/fotopasaporte1.jpg '%}" alt="">
+
+
+            </div>
+            <div class="contenedor-text">
+                <h1> VISTO ED ASSICURAZIONE SANITARIA</h1>
+                <p>
+
+                    Per i cittadini Italiani che vogliono visitare Cuba per turismo è obbligatorio l’acquisto del visto turistico per Cuba, questo visto è una tarjeta rilasciata dal consolato cubano che il cliente deve presentare al suo ingresso a Cuba. Il visto ha una durata
+                    di 30 giorni e può essere esteso a Cuba per altri 30 giorni. Dal 30 Maggio 2010 per l’ingresso a Cuba è obbligatorio avere il visto e anche un assicurazione sanitaria o polizza medica valida a Cuba, l’assicurazione non deve avere un
+                    minimo di massimale ma deve essere una compagnia assicurativa riconosciuta a Cuba. Abbiamo selezionato per i nostri clienti la polizza WI UP 2019 con un massimale di 50.000 euro (LEGGI LE CONDIZIONI )Sono incluse anche le garanzie
+                    di assistenza e copertura per i bagagli. Visto turistico ed assicurazione sanitaria sono indispensabili per garantirvi una vacanza serena e un ingresso regolare sul territorio Cubano. ACQUISTA ON-LINE il Visto Turistico per Cuba e
+                    l’Assicurazione Sanitaria obbligatoria per l’ingresso a Cuba. Spediamo in tutta Italia con corriere espresso in 48 ore. Per informazioni su ordini e pagamenti scrivere a info@todacuba.it —Assicurazione annullamento viaggio(Comprende
+                    la assistenza in viaggio,assistenza perdita o danneggiamento bagaglio,annullamento e spesse mediche) può essere acquistata entro 30 giorni dalla data di inizio del viaggio, oppure entro in qualunque momento purché entro il giorno successivo
+                    alla data di prenotazione dei servizi turistici. L’assicurazione annullamento viaggio opera a favore dell’assicurato per i seguenti eventi: a) Decesso dell’Assicurato e delle persone collegate*; b) Malattia, infortunio e ricovero ospedaliero
+                    dell’Assicurato e delle persone collegate*, imprevedibile e di entità tale da giustificare la cancellazione del viaggio; c) danni materiali all’abitazione o alla sede di Impresa dell’Assicurato o dell’unico Compagno di Viaggio, di
+                    natura straordinaria e imprevedibile che necessitino la presenza dell’Interessato; d) perdita dell’impiego a seguito di licenziamento imprevisto dell’Assicurato per difficoltà del datore di lavoro; e) assunzione al lavoro se l’Assicurato
+                    era alla ricerca di un lavoro allorché il viaggio è stato prenotato; f) citazione o convocazione avanti il tribunale convocazione in qualità di giudice popolare o testimone dell’Assicurato o di un compagno di viaggio; g) Impossibilità
+                    di raggiungere il luogo di partenza o soggiorno a causa di incidente o guasto al mezzo di trasporto dell’Assicurato; h) Variazione delle date di esami universitari, concorsi pubblici, esami di abilitazione professionale dell’Assicurato
+                    o del familiare in viaggio o dell’unico compagno di viaggio. *Persone collegate Sono considerate persone collegate all’Assicurato: a) i familiari dell’Assicurato fino al secondo grado di parentela; b) un compagno di viaggio purché
+                    iscritto al viaggio insieme e contemporaneamente all’Assicurato stesso; c) socio/contitolare dell’azienda o dello studio associato.
+                </p>
+            </div>
+
+
+            <a href="#" class="btn-close-popup">X</a>
+        </div>
+
+    </div>
+
+
+
+    <div class="slider-frame">
+        <ul class="slider_frame_ul ">
+            <li><img src="{% static 'IMG/carrusel1.jpg' %} " alt=" "></li>
+            <li><img src="{% static 'IMG/carrusel2.jpg' %} " alt=" "></li>
+            <li><img src="{% static 'IMG/carrusel3.jpg ' %}" alt=" "></li>
+            <li><img src="{% static 'IMG/carrusel4.jpg' %} " alt=" "></li>
+        </ul>
+    </div>
+</div>
+<!--servicios-->
+<div class="servicios_3d " style="margin-top:1vw ; text-align: center; ">
+    <h2>I nostri servizi</h2>
+    <main>
+
+        <div class="contenedor__cont" style="border: none">
+            <!--casas en cuba-->
+            <div class="cont__father ">
+                <div class="cont ">
+                    <div class="cont__front " style="border: none;background-image: url({% static 'IMG/servicios-casa.jpg'%})">
+                        <div class="bg "></div>
+                        <div class="body__cont_front ">
+                            <p style="font-size:30px ;">Case a Cuba</p>
+                        </div>
+                    </div>
+                    <div class="cont__back ">
+                        <div class="body__cont_back" style="text-align: left; margin-left: 1vw;cursor: pointer; margin-right: 1vw; margin-top: 0.5vw;">
+                            <a href="{% url 'casas_en_habana' %}" class="icon-home excursion" style="color: #024788;"> Habana</a>
+                            <a href="{% url 'casas_en_pinar' %}" class="icon-home excursion" style="color: #024788;"> Pinar Del Río </a>
+                            <a href="{% url 'casas_en_matanzas' %}" class="icon-home excursion" style="color: #024788;"> Matanzas</a>
+                            <a href="{% url 'casas_en_cienfuegos' %}" class="icon-home excursion" style="color: #024788;"> Cienfuegos</a>   
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--excursiones-->
+
+            <div class="cont__father ">
+                <div class="cont ">
+                    <div class="cont__front " style="background-image: url({% static 'IMG/servicios-excursiones.jpg' %}); ">
+                        <div class="bg "></div>
+                        <div class="body__cont_front ">
+                            <p style="font-size:30px ;">Escursioni</p>
+                        </div>
+                    </div>
+                    <div class="cont__back ">
+
+                        <div class="body__cont_back" style="text-align: left; margin-left: 1vw;cursor: pointer; margin-right: 1vw; margin-top: 0.5vw;">
+                            <a href="{% url 'excursion1' %}" class="icon-tree-3 excursion" style="color: #024788;"> Tradizione di Cuba</a>
+                            <a href="{% url 'excursion2' %}" class="icon-tree-3 excursion" style="color: #024788;"> Hemingway </a>
+                            <a href="{% url 'excursion3' %}" class="icon-tree-3 excursion" style="color: #024788;"> Viñales</a>
+                            <a href="{% url 'excursion4' %}" class="icon-tree-3 excursion" style="color: #024788;"> Un giorno da Cubano</a>
+                            <a href="{% url 'excursion5' %}" class="icon-tree-3 excursion" style="color: #024788;"> Religiones</a>
+                            <a href="{% url 'excursion6' %}" class="icon-tree-3 excursion" style="border:none;color: #024788;"> Terrazas</a>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="cont__father ">
+                <div class="cont ">
+                    <div class="cont__front " style="background-image: url({% static 'IMG/servicios-tour.jpg' %}) ">
+                        <div class="bg "></div>
+                        <div class="body__cont_front ">
+                            <p style="font-size:30px ;">Tour</p>
+                        </div>
+                    </div>
+                    <div class="cont__back ">
+                        <div class="body__cont_back" style="margin-top:1vw; text-align: left; margin-left: 1vw;cursor: pointer; margin-right: 1vw; ">
+                            <p class="icon-tree-1" style="font-size: 0.8vw; border-bottom: 1px solid #0e8253;padding-bottom: 0.7vw;"> Tradizione di Cuba</p>
+                            <p class="icon-tree-1" style="font-size: 0.8vw; border-bottom: 1px solid #0e8253;padding-bottom: 0.7vw;"> Il vecchio e il mare</p>
+                            <p class="icon-tree-1" style="font-size: 0.8vw; border-bottom: 1px solid #0e8253;padding-bottom: 0.7vw;"> Trinidad</p>
+                            <p class="icon-tree-1" style="font-size: 0.8vw; border-bottom: 1px solid #0e8253;padding-bottom: 0.7vw;"> Santiago de Cuba</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont__father ">
+                <div class="cont ">
+                    <div class="cont__front " style="background-image: url({% static 'IMG/servicios-t.jpg' %}); ">
+                        <div class="bg "></div>
+                        <div class="body__cont_front ">
+                            <p style="font-size:30px ;">Noleggio auto</p>
+                        </div>
+                    </div>
+                    <div class="cont__back ">
+
+                        <div class="body__cont_back" style="margin-top:1vw; text-align: left; margin-left: 1vw;cursor: pointer; margin-right: 1vw; ">
+                            <p class="icon-cab" style="font-size: 0.8vw; border-bottom: 1px solid #0e8253;padding-bottom: 0.7vw;"> Tradizione di Cuba</p>
+                            <p class="icon-cab" style="font-size: 0.8vw; border-bottom: 1px solid #0e8253;padding-bottom: 0.7vw;"> Il vecchio e il mare</p>
+                            <p class="icon-cab" style="font-size: 0.8vw; border-bottom: 1px solid #0e8253;padding-bottom: 0.7vw;"> Trinidad</p>
+                            <p class="icon-cab" style="font-size: 0.8vw; border-bottom: 1px solid #0e8253;padding-bottom: 0.7vw;"> Santiago de Cuba</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+</div>
+<!--lo que ofrecemos-->
+<div class="lo_que_ofrecemos " style=" display: flex; justify-content: center; ">
+
+    <div style="position:absolute; z-index: 1; color: white; text-align: center; padding-top: 1vw; padding-bottom: 1vw; ">
+        <p>Cosa offriamo</p>
+        <div class="img_ofrecemos " style=" display: flex; flex-wrap: wrap;">
+
+            <img class=" wow rotateIn " src="{% static 'IMG/ofrecemos-Viaje a Cuba.png' %} " alt=" ">
+            <img class=" wow rotateIn " src="{% static 'IMG/ofrecemos-Casas en Cuba.png' %} " alt=" ">
+            <img class=" wow rotateIn " src="{% static 'IMG/ofrecemos-Cruceros.png' %} " alt=" ">
+            <img class=" wow rotateIn " src="{% static 'IMG/ofrecemos-Visitas guiadas.png' %} " alt=" ">
+            <img class=" wow rotateIn " src="{% static 'IMG/ofrecemos-Agencia de viaje.png ' %}" alt=" ">
+            <img class=" wow rotateIn " src="{% static 'IMG/ofrecemos-Documentos.png ' %}" alt=" ">
+        </div>
+        <div>
+        </div>
+    </div>
+    <img style="width: 100%;height: 18vw; filter: brightness(0.5); " src="{% static 'IMG/lqo.jpg ' %}" alt=" ">
+
+</div>
+<!--informacion rapida-->
+<div class="informacion_rapida " style="display: flex; text-align: center; width: 100%;margin: auto; justify-content: center; ">
+    <div class="informacio_img" style=" margin-top: 3vw; margin-right: 8vw;">
+        <h1>Informacion Rápida</h1>
+        <img src="{% static 'IMG/Layer 1.png' %}" alt="" style="width:10vw ; margin-top: 1vw;">
+    </div>
+
+    <div class="informacion_rapida1">
+        <img src="{% static 'IMG/escudo cuba.png' %}" alt="" style="width: 5vw;padding: 0.5vw;">
+        <h3>Consolato Generale di Cuba Milano</h3>
+        <p> Via G.B Pirelli 30</p>
+        <p>Tel.02 67391344 - Fax 02 66712694</p>
+        <p>Dal Lunedi' al Venerdi 09:00/12:00</p>
+    </div>
+    <div class="informacion_rapida1">
+        <img src="{% static 'IMG/escudo cuba.png' %}" alt="" style="width: 5vw;padding: 0.5vw;">
+        <h3>Amb.di Cuba in Italia Roma</h3>
+        <p>Via Licinia 7</p>
+        <p>Tel.06517241 - Fax 06 5745445</p>
+        <p>Dal Lunedi' al Venerdi 09:00/12:00</p>
+    </div>
+    <div class="informacion_rapida1">
+        <img src="{% static 'IMG/Emblema-de-Italia-263x300.png' %}" alt="" style="width: 5vw;padding: 0.5vw;">
+        <h3>Amb. Italiana a Cuba Miramar</h3>
+        <p> 5 AVENIDA n.402, Esquina Calle 4</p>
+        <p>Tel.005372045615</p>
+        <p>Fax:005372045659</p>
+    </div>
+
+</div>
+{%endblock%}

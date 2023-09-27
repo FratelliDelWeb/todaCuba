@@ -1,0 +1,254 @@
+.galleria {
+    width: 100%;
+}
+
+.galleria-contenedor {
+    align-items: center;
+    display: flex;
+    height: 400px;
+    margin: 0 auto;
+    max-width: 1000px;
+    position: relative;
+}
+
+.galleria-item {
+    height: 200px;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    width: 330px;
+    z-index: 0;
+    border-radius: 15px;
+    background-size: contain;
+}
+
+.galleria-item-1 {
+    top: 40px;
+    left: 15%;
+    opacity: .4;
+    transform: translateX(-50%);
+}
+
+.galleria-item-2,
+.galleria-item-4 {
+    height: 250px;
+    width: 380px;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.galleria-item-2 {
+    left: 30%;
+    transform: translateX(-50%);
+    top: 20px;
+}
+
+.galleria-item-3 {
+    box-shadow: -2px 5px 33px 6px rgba(0, 0, 0, 0.35);
+    height: 300px;
+    left: 50%;
+    width: 430px;
+    transform: translateX(-50%);
+    opacity: 1;
+    z-index: 2;
+}
+
+.galleria-item-4 {
+    left: 70%;
+    transform: translateX(-50%);
+    top: 20px;
+}
+
+.galleria-item-5 {
+    left: 85%;
+    opacity: .4;
+    transform: translateX(-50%);
+    top: 40px;
+}
+
+.galleria-controls {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    height: 50px;
+}
+
+.galleria-controls button {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    font-size: 30px;
+    padding: 0 5px;
+    text-transform: capitalize;
+}
+
+.galleria-controls-button:focus {
+    outline: none;
+}
+
+.galleria-controls-previous {
+    position: relative;
+}
+
+.galleria-controls-previous::before {
+    border: solid #000;
+    border-width: 0 5px 5px 0;
+    content: '';
+    display: inline-block;
+    height: 5px;
+    left: -30%;
+    padding: 10px;
+    top: 25%;
+    transform: rotate(135deg) translateY(-50%);
+    transition: left 0.15s ease-in-out;
+    width: 5px;
+}
+
+.galleria-controls-previous:hover::before {
+    left: -40px;
+}
+
+.galleria-controls-siguiente {
+    position: relative;
+}
+
+.galleria-controls-siguiente::before {
+    border: solid #000;
+    border-width: 0 5px 5px 0;
+    content: '';
+    display: inline-block;
+    height: 5px;
+    position: absolute;
+    padding: 10px;
+    right: -30px;
+    top: 45%;
+    transform: rotate(-45deg) translateY(-50%);
+    transition: left 0.15s ease-in-out;
+    width: 5px;
+}
+
+.galleria-controls-siguiente:hover::before {
+    right: -40px;
+}
+
+.galleria-nav {
+    bottom: -15px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.galleria-nav li {
+    background: #ccc;
+    border-radius: 50%;
+    height: 10px;
+    margin: 0 16px;
+    width: 10px;
+}
+
+.galleria-nav li .galleria-item-selected {
+    background: #555;
+}
+
+
+/*sabiasQ*/
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 35vh;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.container::after {
+    content: "";
+    width: 2px;
+    height: 100%;
+    background: #1b3231;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 1px);
+    z-index: 1;
+}
+
+.evento {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1vw;
+    position: relative;
+}
+
+.evento::after {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 100px;
+    background: #DCDFD9;
+    border: 2px solid #1b3231;
+    position: absolute;
+    z-index: 2;
+    left: calc(50% - 9px);
+}
+
+.fecha {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 42%;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.foto {
+    width: 42%;
+    height: 10%;
+    border: 10px solid #fff;
+    position: relative;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.foto::after {
+    content: "";
+    display: block;
+    border: 20px solid transparent;
+    border-left: 20px solid #fff;
+    position: absolute;
+    right: -50px;
+    top: calc(50% - 20px);
+}
+
+.foto img {
+    width: 100%;
+    vertical-align: top;
+}
+
+.evento:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.evento:nth-child(even) .fecha {
+    justify-content: end;
+}
+
+.evento:nth-child(even) .foto::after {
+    content: "";
+    border: 20px solid transparent;
+    border-right: 20px solid #fff;
+    right: initial;
+    left: -50px;
+}

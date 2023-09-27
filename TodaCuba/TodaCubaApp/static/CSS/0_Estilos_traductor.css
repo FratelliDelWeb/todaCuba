@@ -1,0 +1,30 @@
+/*idioma*/
+
+.goog-logo-link {
+    display: none !important;
+}
+
+.goog-te-gadget img {
+    display: none !important;
+}
+
+.goog-te-gadget-simple {
+    background-color: transparent !important;
+    border: none !important;
+    font-size: 15px !important;
+    text-decoration: none !important;
+    list-style: none !important;
+    color: white !important;
+}
+
+span .indicator {
+    display: none !important;
+}
+
+table {
+    display: none !important;
+}
+
+.goog-te-gadget-simple span {
+    color: #fff !important;
+}

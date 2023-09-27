@@ -1,0 +1,61 @@
+{% extends "TodaCubaApp/base.html" %} {% block content %} {% load static %}
+
+
+
+<!--Quienes somos-->
+<div class="row col-12" style="padding: 0 !important; margin: 0 !important;">
+    <div class="row col-12" style="margin-top:1vw">
+        <div class="col-4"></div>
+        <div class="col-4" style="margin-top:1vw;font-size:20px;text-align: center;font-weight: bold;">
+            <p>Chi siamo?</p>
+            
+        </div>
+        <div class="col-4 "></div>
+    </div>
+
+    <div class="row col-12 flex-row align-items-center">
+        <div class="col-12 col-md-2"></div>
+
+        <div class="col-xl-4 col-md-8 flex-column">
+            <p class="wow fadeInLeftBig" style="margin-top:1vw;font-size: 20px;text-align: justify;">{{ quienes_somos.primerBloqueTexto }}</p>
+        </div>
+
+        <div class="col-xl-4 col-md-8 flex-column" style="margin:auto;  justify-content: center;">
+            <img class="wow fadeInRightBig mx-auto" src="{{ quienes_somos.imagenprimerBloqueTexto.url }}" alt="Imagen Quienes Somos" style="width:70%;margin:auto;display: flex;">
+        </div>
+    </div>
+    <div class="row col-12 flex-row align-items-center"></div>
+    
+    <div class="row col-12">
+        <div class="col-2 "></div>
+        <div class="col-xl-4 col-md-8 flex-column">
+      
+    <img class="wow fadeInLeftBig" style="width:60%;margin:auto;display: flex; " src="{{ quienes_somos.imagenSegundoBloqueTexto.url }}" alt="">
+        </div>
+        <div class="col-xl-4 col-md-8 flex-column">
+            <p class="wow fadeInRightBig" style="margin-top:1vw;font-size: 20px;text-align: justify; ">{{ quienes_somos.SegundoBloqueTexto }}</p>
+           
+
+        <div class="col-2 "></div>
+        </div>
+    </div>
+    <div class="row col-12" style="margin-top:1vw; margin-bottom: 1vw; ">
+        <div class="col-2 "></div>
+        <div class="col-12 col-md-10 col-sm-10 wow fadeInUp" style="margin-bottom: 1VW;">
+            <img style="width:118px;height: 180px; margin-right:1.4vw; border-radius: 8px;margin-bottom: 1VW;"  src="{{ quienes_somos.imagen1.url }}" alt="">
+            <img style="width:118px;height: 180px; margin-right:1.4vw; border-radius: 8px;margin-bottom: 1VW;"  src="{{ quienes_somos.imagen2.url }}" alt="">
+            <img style="width:118px;height: 180px; margin-right:1.4vw; border-radius: 8px;margin-bottom: 1VW;"  src="{{ quienes_somos.imagen3.url }}" alt="">
+            <img style="width:118px;height: 180px; margin-right:1.4vw; border-radius: 8px;margin-bottom: 1VW;"  src="{{ quienes_somos.imagen4.url }}" alt="">
+            <img style="width:118px;height: 180px; margin-right:1.4vw; border-radius: 8px;margin-bottom: 1VW;"  src="{{ quienes_somos.imagen5.url }}" alt="">
+            <img style="width:118px;height: 180px; margin-right:1.4vw; border-radius: 8px;margin-bottom: 1VW;"  src="{{ quienes_somos.imagen6.url }}" alt="">
+            <img style="width:118px;height: 180px; margin-right:1.4vw; border-radius: 8px;margin-bottom: 1VW;"  src="{{ quienes_somos.imagen7.url }}" alt="">
+            <img style="width:118px;height: 180px; margin-right:1.4vw; border-radius: 8px;margin-bottom: 1VW;"  src="{{ quienes_somos.imagen8.url }}" alt="">
+        
+
+
+
+        </div>
+        <div class="col-2 "></div>
+    </div>
+</div>
+{%endblock%}

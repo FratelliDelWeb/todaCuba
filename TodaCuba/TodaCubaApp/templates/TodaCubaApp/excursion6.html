@@ -1,0 +1,80 @@
+{% extends "TodaCubaApp/base.html" %} {% block content %} {% load static %}
+<div class="row col-12" style="margin-top: 1vw; margin-bottom: 1vw !important;">
+   
+    <div class="col-12 col-md-8" style="height: 20vw !important;margin: auto;justify-content: center;">
+
+        <section id="slider">
+            <input type="radio" name="slider" id="s1">
+            <input type="radio" name="slider" id="s2">
+            <input type="radio" name="slider" id="s3">
+            <input type="radio" name="slider" id="s4">
+            <input type="radio" name="slider" id="s5">
+
+            <label for="s1" id="slide1">
+            <img src="{{ excursion6.imagenCarrusel1.url }}" alt="" height="100%" width="100%" style="border-radius: 15px;">
+        </label>
+            <label for="s2" id="slide2">
+            <img src="{{ excursion6.imagenCarrusel2.url }}" alt="" height="100%" width="100%" style="border-radius: 15px;">
+        </label>
+            <label for="s3" id="slide3">
+            <img src="{{ excursion6.imagenCarrusel3.url }}" alt="" height="100%" width="100%" style="border-radius: 15px;">
+        </label>
+            <label for="s4" id="slide4">
+            <img src="{{ excursion6.imagenCarrusel4.url }}" alt="" height="100%" width="100%" style="border-radius: 15px;">
+        </label>
+            <label for="s5" id="slide5">
+            <img src="{{ excursion6.imagenCarrusel5.url }}" alt="" height="100%" width="100%" style="border-radius: 15px;">
+        </label>
+
+        </section>
+
+    </div>
+</div>
+<div class="row col-12" style="margin-top: 8vw;">
+    <div class="col-2"></div>
+    <div class="col-12 col-md-8">
+        <h3>Escursione 6: {{ excursion6.nombreDeLaExcursion }} </h3>
+    </div>
+    <div class="col-2"></div>
+</div>
+
+
+<div class="row col-12">
+    <div class="col-2"></div>
+    <div class="col-12 col-md-8">
+        <p>{{ excursion6.descripcionDeLaExcursion }}</p>
+        <p class="icon-clock-4">Durata: {{ excursion6.duracion }} 
+        </p>
+        <p class="icon-cab">Incluso:  {{ excursion6.servicioQueIncluye }}</p>
+        <p class="icon-user">Minimo  {{ excursion6.minimoDePersonas }} </p>
+        <p class="icon-location">Punto di partenza:  {{ excursion6.puntoDePartida }}</p>
+    </div>
+</div>
+
+<div class="row col-12">
+    <div class="col-2"></div>
+    <div class="col-12 col-md-8">
+
+        <p style="text-align: justify;">  {{ excursion6.Informacion }}</p>
+        <h5 class=" icon-megaphone-1">{{ excursion6.alerta }}</h5>
+    </div>
+</div>
+
+
+<div class="row col-12" style="margin-top:1vw; margin-bottom: 1vw; ">
+    <div class="col-2 "></div>
+    <div class="col-12 col-md-8 wow fadeInUp">
+        <img src="{{ excursion6.imagen1.url }}" alt="" style="width:118px;height: 180px; margin-right:1.4vw; border-radius: 8px;margin-bottom: 1VW;">
+        <img src="{{ excursion6.imagen2.url }}" alt="" style="width:118px;height: 180px; margin-right:1.4vw; border-radius: 8px;margin-bottom: 1VW;">
+        <img src="{{ excursion6.imagen3.url }}" alt="" style="width:118px;height: 180px; margin-right:1.4vw; border-radius: 8px;margin-bottom: 1VW;">
+        <img src="{{ excursion6.imagen4.url }}" alt="" style="width:118px;height: 180px; margin-right:1.4vw; border-radius: 8px;margin-bottom: 1VW;">
+        <img src="{{ excursion6.imagen5.url }}"alt="" style="width:118px;height: 180px; margin-right:1.4vw; border-radius: 8px;margin-bottom: 1VW;">
+        <img src="{{ excursion6.imagen6.url }}" alt="" style="width:118px;height: 180px; margin-right:1.4vw; border-radius: 8px;margin-bottom: 1VW;">
+        <img src="{{ excursion6.imagen7.url }}" alt="" style="width:118px;height: 180px; margin-right:1.4vw; border-radius: 8px;margin-bottom: 1VW;">
+        <img src="{{ excursion6.imagen8.url }}" alt="" style="width:118px;height: 180px; margin-right:1.4vw; border-radius: 8px;margin-bottom: 1VW;">
+
+
+    </div>
+    <div class="col-2 "></div>
+</div>
+{%endblock%}

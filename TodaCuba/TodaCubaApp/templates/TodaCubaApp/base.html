@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+
+<head>
+
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodaCuba</title>
+
+    <link rel="stylesheet" href="{% static 'CSS/0_Estilos_traductor.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/1_Estilos_Home.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/1_Estilo_ModalInformacion.css' %}">
+
+    <link rel="stylesheet" href="{% static 'CSS/2_Estilo_Menu_Footer.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/4_Estilo_Slider_Excursiones.css' %}">
+
+    <link rel="stylesheet" href="{% static 'BOOTSTRAP-4.1.0-dist/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'BOOTSTRAP-4.1.0-dist/css/bootstrap.min.css' %}">
+    
+
+    <link rel="icon" href="{% static 'IMG/logo-Toda-Cuba-trascinato1.png' %}">
+
+    <link rel="stylesheet" href="{% static 'Fonteloiconos/Programa/css/fontello.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/Libreria/animate.css' %}">
+    <script src="{% static 'JS/Libreria/wow.min.js' %}"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+    <style>
+        [type=radio] {
+            position: relative;
+            margin: 0;
+            justify-content: center;
+            top: 90%;
+            left: 46.9%;
+        }
+        
+        #slider {
+            margin-top: 1vw;
+            height: 130%;
+            position: relative;
+            perspective: 1200px;
+            transform-style: preserve-3d;
+        }
+        
+        #slider label {
+            margin: auto;
+            width: 40%;
+            height: 80%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            transition: transform 0.4s ease;
+        }
+        
+        #s1:checked~#slide4,
+        #s2:checked~#slide5,
+        #s3:checked~#slide1,
+        #s4:checked~#slide2,
+        #slide3 {
+            box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .37);
+            transform: translate3d(-90%, 0, -250px);
+            opacity: 0.3;
+        }
+        
+        #s1:checked~#slide5,
+        #s2:checked~#slide1,
+        #s3:checked~#slide2,
+        #s4:checked~#slide3,
+        #slide4 {
+            box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .3), 0 2px 2px 0 rgba(0, 0, 0, .2);
+            transform: translate3d(-45%, 0, -120px);
+            opacity: 0.6;
+        }
+        
+        #s1:checked~#slide1,
+        #s2:checked~#slide2,
+        #s3:checked~#slide3,
+        #s4:checked~#slide4,
+        #slide5 {
+            box-shadow: 0 13px 25px 0 rgba(0, 0, 0, .3), 0 11px 7px 0 rgba(0, 0, 0, .19);
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+        }
+        
+        #s1:checked~#slide2,
+        #s2:checked~#slide3,
+        #s3:checked~#slide4,
+        #s4:checked~#slide5,
+        #slide1 {
+            box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .3), 0 2px 2px 0 rgba(0, 0, 0, .2);
+            transform: translate3d(45%, 0, -120px);
+            opacity: 0.6;
+        }
+        
+        #s1:checked~#slide3,
+        #s2:checked~#slide4,
+        #s3:checked~#slide5,
+        #s4:checked~#slide1,
+        #slide2 {
+            box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .37);
+            transform: translate3d(90%, 0, -250px);
+            opacity: 0.3;
+        }
+    </style>
+
+</head>
+<body style="contain:content">
+    <div class="primer_contenedor">
+        <p style="margin-left: 2vw ">www.todacuba.it</p>
+        <p style="margin-left: 2vw ;"><span class="icon-phone">081.183.68.826</span></p>
+        <p style="margin-left: 2vw ;"><a href="https://www.facebook.com/todacubatouroperator" style="color: white;"><span class="icon-facebook-rect-1"></span></a></p>
+        <li id="google_translate_element" class=" icon-language" style="display:flex;margin: auto; color: white; justify-content: right;"></li>
+    </div>
+    <div class="contedor_menu">
+        <div class="logo">
+            <img src="{% static 'IMG/logo-Toda-Cuba-trascinato1.png' %}" alt="" style="width:120px; margin-left: 5vw;">
+        </div>
+
+    <!--  <i class="icon-menu-2" id="icono_menu"></i>
+        <div id="back_menu"></div>-->  
+       
+         
+        <nav>
+            <div class="navbar">
+             
+             
+              <div class="nav-links">
+                <div class="sidebar-logo">
+                   <i class="bx bx-x" ></i>
+                </div>
+                <ul class="links">
+                    <li><a href="{% url 'home'%}" id="estilomenu">Casa</a></li>
+                 
+               
+                  <li  >
+                    <a class="clip-menu-servicios" href="#" id="estilomenu">Servizi consolari
+                    <i class="bx bxs-chevron-down js-arrow arrow"><i class="icon-right-dir"></i></i></a>
+                    <ul class="js-sub-menu sub-menu">
+                      <li class="borde-submenu"><a href="#">Visti turistici</a></li>
+                      <li class="borde-submenu"><a href="#">Visti per ricongiungimento familiare</a></li>
+                      <li class="borde-submenu"> <a href="#">Nulla osta</a></li>
+                      <li class="borde-submenu"><a href="#">Rinnovo del passaporto</a></li>
+                      <li class="borde-submenu" ><a href="#">cittadinanza italiana</a></li>
+                    </ul>
+                  </li>
+                  
+
+                  <li>
+                    <a class="clip-menu-tramites" href="#" id="estilomenu">Elaborazione documentale
+                      <i class="bx bxs-chevron-down tr-arrow arrow"><i class="icon-right-dir"></i></i></a>
+                    <ul class="tr-sub-menu sub-menu">
+                      <li class="borde-submenu" ><a href="#" >Legalizzazioni di documenti</a></li>
+                      <li class="borde-submenu"><a href="#">Richiesta documenti</a></li>
+                      <li class="borde-submenu"><a href="#">Traduzioni</a></li>
+                      <li class="borde-submenu"><a href="#">Certificati di matrimonio, divorzio e nascita</a></li>
+                      <li class="borde-submenu"><a href="#">Matrimoni d'appalto</a></li>
+                    </ul>
+                  </li>
+                  
+                  <li>
+                    <a class="clip-menu" id="estilomenu" href="#">Turismo Independiente
+                    <i class="bx bxs-chevron-down htmlcss-arrow arrow "><i class="icon-right-dir"></i>
+                    </i></a>
+                    <ul class="htmlCss-sub-menu sub-menu">
+                      <li class="casa"><a class="clip-casascuba" href="#">Case a Cuba
+                        <i class="bx bxs-chevron-right casa-arrow arrow"><i class="icon-right-dir"></i></i></a>
+
+                        <ul class="casa-sub-menu sub-menu">
+                          <li class="borde-submenu"><a  href="{% url 'casas_en_habana' %}">Habana</a></li>
+                          <li class="borde-submenu"><a  href="{% url 'casas_en_pinar' %}">Pinar Del Río</a></li>
+                          <li class="borde-submenu"><a  href="{% url 'casas_en_matanzas' %}">Matanzas</a></li>
+                          <li class="borde-submenu"> <a  href="{% url 'casas_en_cienfuegos' %}">Cienfuegos</a></li>
+                          <li class="borde-submenu"><a  href="">...</a></li>
+                          <li class="borde-submenu"><a  href="">...</a></li>
+                        </ul>
+                      </li>
+
+                      
+                      <li class="more"><a class="clip-escursiones" href="#">Escursioni
+                        <i class="bx bxs-chevron-right more-arrow arrow"><i class="icon-right-dir"></i></i></a>
+
+                        <ul class="more-sub-menu sub-menu">
+                          <li  class="borde-submenu"><a  href="{% url 'excursion1' %}">Tradizione di Cuba</a></li>
+                          <li class="borde-submenu"><a  href="{% url 'excursion2' %}">Hemingway</a></li>
+                          <li class="borde-submenu"><a  href="{% url 'excursion3' %}">Viñales</a></li>
+                          <li class="borde-submenu"><a  href="{% url 'excursion4' %}">Un giorno da Cubano</a></li>
+                          <li class="borde-submenu"><a  href="{% url 'excursion5' %}">Religiones</a></li>
+                          <li class="borde-submenu"><a  href="{% url 'excursion6' %}">Terrazas</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                 
+                  <li><a href="{% url 'enviosCuba' %}" id="estilomenu">Spedizioni a Cuba</a></li>
+                  <li><a href="{% url 'quienesSomos'%}" id="li-qs">Chi siamo?</a></li>
+
+                </ul>
+
+                
+              </div>
+              <div class="search-box">
+                <i class='bx bx-search'></i>
+                <div class="">
+                  
+                </div>
+              </div>
+              <i class="bx bx-menu icon-menu-2"></i>
+              <div id="back_menu"></div>
+            </div>
+         
+           
+       
+        </nav> 
+       
+    </div>
+    {% block content %} {% endblock %}
+
+
+    <!--Boton de ir hacia arriba-->
+    <div id="boton_subir">
+        <i class="iconoboton_up icon-angle-double-up"></i>
+    </div>
+
+
+    <footer class=" text-light" >
+        <div>
+            <div class="divcontacto wow fadeInRight " style="width:100%">
+                <div class="logo_blanco_div">
+                    <img class="" src="{% static 'IMG/logo-Toda-Cuba-blanco.png' %}" style="width: 10vw">
+                </div>
+
+
+                <div class="columna">
+                    <div class="contactocolumna">
+                        <p class="icon-location-5 "> Indirizzo Via Martiri Atellani 33, SantÁrpino(CE)-CAP 81030</p>
+                    </div>
+
+                    <div class="contactocolumna ">
+                        <p class="icon-phone ">Telefono 081.183.68.826 | 333.937.1442 | 342.701.7776 </p>
+                    </div>
+                    <div class="contactocolumna">
+                        <p class="icon-mail-4">e-mail info@todacuba.it</p>
+
+                    </div>
+
+                    <div class="contactocolumna " id="imgfotter"  style=" width: 40%;padding: 1%;padding-right: 2%;">
+                        <img style="width:25vw ; " src="{% static 'IMG/Layer 1 (2).png' %}" alt="">
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="abajodiv ">
+            <img class="abajoimagen " src="{% static 'IMG/10 DESARROLLADO.png' %} ">
+        </div>
+
+    </footer>
+    <script src="{% static 'BOOTSTRAP-4.1.0-dist/js/bootstrap.js' %}"></script>
+    <script src="{% static 'BOOTSTRAP-4.1.0-dist/js/bootstrap.min.js' %}"></script>
+
+
+
+    <script src="{% static 'JS/Jquery/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'JS/Jquery/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'JS/boton_up.js' %}"></script>
+    <script src="{% static 'JS/menu.js' %}"></script>
+
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es',
+                includedLanguages: 'es,en,fr,it,pt,de',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                gaTrack: true
+            }, 'google_translate_element');
+        }
+    </script>
+
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+
+
+</html>

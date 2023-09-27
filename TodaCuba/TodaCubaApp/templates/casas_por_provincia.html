@@ -1,0 +1,41 @@
+{% extends "TodaCubaApp/base.html" %} 
+{% block content %} 
+{% load static %}
+<div class="row col-12" style="margin-top:1vw">
+  <div class="col-4"></div>
+  <div class="col-4" style="margin-top:1vw;font-size:25px;text-align: center;font-weight: bold;">
+      <p>{{provincia}}</p>
+  </div>
+  <div class="col-4 "></div>
+</div>
+
+{% if casas%}
+  <ul style="display:flex;margin: auto;justify-content: center;flex-wrap: wrap;">
+ 
+ 
+    {% for c in casas %}
+    <div style="border-radius:8px ; border: 2px solid #d5d4d4;margin: 1.5vw;max-width: 300px;">
+      <div style=" width: 300px; height: 200px; border-bottom: 2px solid #d5d4d4; padding: 0.8vw;">
+        <img id="imagen-principal-{{ c.id }}" src="{{c.imagenPrincipal.url}}" alt="" style="max-width: 100%; max-height: 100%; margin: auto;display: flex;">
+      </div>
+    
+      <div>
+        <img class="miniatura" id="miniatura-{{ c.id }}-1" src="{{c.imagenPrincipal.url}}" alt="" style="width: 40px;height:50px ;margin-top: 5px;margin-left: 5px;cursor: pointer;">
+        <img class="miniatura" id="miniatura-{{ c.id }}-2" src="{{c.imagen2.url}}" alt="" style="width: 40px;height:50px ;margin-top: 5px;margin-left: 5px;cursor: pointer;">
+        <img class="miniatura" id="miniatura-{{ c.id }}-3" src="{{c.imagen3.url}}" alt="" style="width: 40px;height:50px;margin-top: 5px;margin-left: 5px;cursor: pointer;">
+        <img class="miniatura" id="miniatura-{{ c.id }}-4" src="{{c.imagen4.url}}" alt="" style="width: 40px;height:50px;margin-top: 5px;margin-left: 5px;cursor: pointer;">
+        <img class="miniatura" id="miniatura-{{ c.id }}-5" src="{{c.imagen5.url}}" alt="" style="width: 40px;height:50px;margin-top: 5px;margin-left: 5px;cursor: pointer;">
+        <img class="miniatura" id="miniatura-{{ c.id }}-6" src="{{c.imagen6.url}}" alt="" style="width: 40px;height:50px;margin-top: 5px;margin-left: 5px;cursor: pointer;">
+      </div>
+    
+      <p style="margin: auto;text-align: center;font-weight: bold;font-size: 20px; border-bottom: 2px solid #d5d4d4 ;">{{c.municipioLocacion}}</p>
+      <p style="margin: auto;text-align: center;font-weight: bold;font-size: 20px; border-bottom: 2px solid #d5d4d4 ;">{{c.nombreCasa}}</p>
+      <p style="margin: auto;text-align: center;font-size: 20px; width: 100%;">{{c.Informacion}}</p>
+    </div>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No hay casas disponibles en {{ provincia }}</p>
+{% endif %}
+
+{% endblock %}

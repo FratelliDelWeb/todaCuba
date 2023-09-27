@@ -1,0 +1,5 @@
+{% if has_add_permission %}
+    <a href="{{ url 'admin:excursion2_add' }}" class="addlink">
+        {% blocktrans with cl.opts.verbose_name as name %}Agregar {{ name }}{% endblocktrans %}
+    </a>
+{% endif %}
